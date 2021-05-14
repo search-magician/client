@@ -15,7 +15,7 @@ const Search1 = () => {
   const handleKeyPress = (text) => {
     setSearchText(text)
   }
-    return (<div>
+    return (<div style={{marginTop:'65px'}}>
       <SearchBar ph={"Search Query"} handleKeyPress={handleKeyPress} handleEnter={handleEnter}/>
       {isLoading ? <p>Loading Results...</p> :
         <VideosList videos={videos}/>}

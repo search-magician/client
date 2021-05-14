@@ -19,7 +19,7 @@ const Search2 = () => {
   const handleKeyPress2 = (text) => {
     setSearchText2(text)
   }
-    return (<div>
+    return (<div style={{marginTop:'65px'}}>
       <SearchBar ph="Video Link" handleKeyPress={handleKeyPress1}handleEnter={handleEnter}/>
       <SearchBar ph="Search Query" handleKeyPress={handleKeyPress2}handleEnter={handleEnter}/>
       {isLoading ? <p>Loading Results...</p> :
