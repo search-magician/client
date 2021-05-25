@@ -1,10 +1,12 @@
-const search2 = async (searchText1, searchText2) => {
+import axios from 'axios';
+const search2 = async (searchText1, searchText2) => { // url , query
     // let url = "https://www.googleapis.com/youtube/v3/videos"
     // let response = await fetch(url)
     let startIdx = searchText1.search("=")
     searchText1 = searchText1.substring(startIdx + 1)
     console.log(searchText1, searchText2)
-    let response = ['3FH7pqTP4tY', '1PSIdXMMn7I', 'wwbM63-LFD4', 'rZjciV-pff0', 'GVHighLm3os']
+    const response = await axios.post("http://localhost:5000/search/interval-suggestion/" + searchText1, { 'query': searchText2 })
+    console.log(response.data)
     return response
 }
 export default search2
