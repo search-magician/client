@@ -2,7 +2,6 @@ import axios from 'axios';
 
 const search = async (searchText) => {
     const response = await axios.get("http://localhost:5000/search", {params: {'q': searchText}})
-    console.table(response)
     const idsList = []
     response.data.forEach(video => {
         idsList.push(video['id']);
